@@ -4,74 +4,185 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Akshar:wght@300&family=Mulish&family=Pacifico&family=Poppins:wght@100;200;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <h1>Playpower</h1>
-    <!-- <label for="cars">Choose a Timezone:</label>
-    <select name="cars" id="cars">
-      <option value="UTC">UTC</option>
+    <div>
+      <div class="toggle">
+        <i class="fa-solid fa-moon icon"></i>
+      </div>
+      <!-- <label for="cars">Choose a Timezone:</label>
+        <select name="cars" id="cars">
+          <option value="UTC">UTC</option>
       <option value="IST">IST</option>
       <option value="JST">JST</option>
       <option value="PST">PST</option>
-      <option value="IDT">IDT</option>
+      <option value="IDT">IDT</option>  
     </select> -->
-    <label for="slider1">IST</label>
-    <input
-      type="range"
-      id="slider1"
-      name="slider1"
-      min="0"
-      max="1440"
-      step="15"
-      value="0"
-    />
-    <span id="sliderValue1"></span>
-    <label for="slider2">UTC</label>
-    <input
-      type="range"
-      id="slider2"
-      name="slider2"
-      min="0"
-      max="1440"
-      step="15"
-      value="0"
-    />
-    <span id="sliderValue2"></span>
-    <label for="slider3">JST</label>
-    <input
-      type="range"
-      id="slider3"
-      name="slider3"
-      min="0"
-      max="1440"
-      step="15"
-      value="0"
-    />
-    <span id="sliderValue3"></span>
-    <label for="slider4">PST</label>
-    <input
-      type="range"
-      id="slider4"
-      name="slider4"
-      min="0"
-      max="1440"
-      step="15"
-      value="0"
-    />
-    <span id="sliderValue4"></span>
-    <label for="slider5">IDT</label>
-    <input
-      type="range"
-      id="slider5"
-      name="slider5"
-      min="0"
-      max="1440"
-      step="15"
-      value="0"
-    />
-    <span id="sliderValue5"></span>
-    <!-- <span id="sliderValue"></span> -->
-    <br /><br />
+      <div class="sliderContainer">
+        <div class="slider_info">
+          <div>
+            <span class="label">IST</span>
+            <p class="in_label" style="font-size: 14px">Indian standard time</p>
+          </div>
+          <div>
+            <div class="box">
+              <span id="sliderValue1"></span>
+            </div>
+            <div class="in_box">
+              <p style="font-size: 14px">GMT +5:30</p>
+              <p id="ist-date" style="font-size: 14px"></p>
+            </div>
+          </div>
+        </div>
+        <input
+          type="range"
+          id="slider1"
+          class="slider"
+          name="slider1"
+          min="0"
+          max="1440"
+          step="15"
+          value="0"
+        />
+        <!-- <span id="sliderValue1"></span> -->
+      </div>
+      <div class="sliderContainer">
+        <div class="slider_info">
+          <div>
+            <span class="label">UTC</span>
+            <p class="in_label" style="font-size: 14px">
+              universal time coordinated
+            </p>
+          </div>
+          <div>
+            <div class="box">
+              <span id="sliderValue2"></span>
+            </div>
+            <div class="in_box">
+              <p style="font-size: 14px">GMT +0</p>
+              <p id="utc-date" style="font-size: 14px"></p>
+            </div>
+          </div>
+        </div>
+        <input
+          type="range"
+          id="slider2"
+          class="slider"
+          name="slider2"
+          min="0"
+          max="1440"
+          step="15"
+          value="0"
+        />
+        <!-- <span id="sliderValue2"></span> -->
+      </div>
+      <div class="sliderContainer">
+        <div class="slider_info">
+          <div>
+            <span class="label">JST</span>
+            <p class="in_label" style="font-size: 14px">
+              japanese standard time
+            </p>
+          </div>
+          <div>
+            <div class="box">
+              <span id="sliderValue3"></span>
+            </div>
+            <div class="in_box">
+              <p style="font-size: 14px">GMT +9</p>
+              <p id="jst-date" style="font-size: 14px"></p>
+            </div>
+          </div>
+        </div>
+        <!-- <label for="slider3">JST</label> -->
+        <input
+          type="range"
+          id="slider3"
+          class="slider"
+          name="slider3"
+          min="0"
+          max="1440"
+          step="15"
+          value="0"
+        />
+        <!-- <span id="sliderValue3"></span> -->
+      </div>
+      <div class="sliderContainer">
+        <div class="slider_info">
+          <div>
+            <span class="label">PST</span>
+            <p class="in_label" style="font-size: 14px">
+              Pakistan standard time
+            </p>
+          </div>
+          <div>
+            <div class="box">
+              <span id="sliderValue4"></span>
+            </div>
+            <div class="in_box">
+              <p style="font-size: 14px">GMT +5</p>
+              <p id="pst-date" style="font-size: 14px"></p>
+            </div>
+          </div>
+        </div>
+        <!-- <label for="slider4">PST</label> -->
+        <input
+          type="range"
+          id="slider4"
+          class="slider"
+          name="slider4"
+          min="0"
+          max="1440"
+          step="15"
+          value="0"
+        />
+        <span id="sliderValue4"></span>
+      </div>
+      <div class="sliderContainer">
+        <div class="slider_info">
+          <div>
+            <span class="label">IDT</span>
+            <p class="in_label" style="font-size: 14px">Israel daylight time</p>
+          </div>
+          <div>
+            <div class="box">
+              <span id="sliderValue5"></span>
+            </div>
+            <div class="in_box">
+              <p style="font-size: 14px">GMT +2</p>
+              <p id="idt-date" style="font-size: 14px"></p>
+            </div>
+          </div>
+        </div>
+        <input
+          type="range"
+          id="slider5"
+          class="slider"
+          name="slider5"
+          min="0"
+          max="1440"
+          step="15"
+          value="0"
+        />
+        <!-- <span id="sliderValue5"></span> -->
+      </div>
+      <!-- <span id="sliderValue"></span> -->
+      <br /><br />
+    </div>
   </body>
   <script src="data.js"></script>
 </html>
